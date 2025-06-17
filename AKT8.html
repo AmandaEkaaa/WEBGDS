@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkatan 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+/* CSS untuk body + navbar*/    
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEF9E1;
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+
+    padding-top: 80px;
+}
+        
+.navbar {
+    padding: 15px 0;
+    background-color: rgb(118, 29, 29);
+}
+        
+.navbar-brand {
+    font-weight: bold;
+}   
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand,
+.custom-navbar .dropdown-toggle,
+.custom-navbar .dropdown-item {
+    color: white !important;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .dropdown-item:hover {
+    color: #cccccc !important;
+}
+.custom-navbar .dropdown-menu {
+    background-color: rgb(80, 20, 20);
+}
+/* Animasi saat halaman dimuat */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gaya judul */
+.judul-gds {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a254b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  margin: 40px auto 20px;
+  padding-bottom: 10px;
+  opacity: 0; /* awalnya sembunyi */
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Garis bawah keren */
+.judul-gds::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #3498db;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* CSS untuk Card Profil*/
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.profile-card {
+  opacity: 0;
+  animation: blurIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.profile-card {
+  background-color: #762f2f;
+background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+box-shadow: 
+  0 4px 8px rgba(0, 0, 0, 0.3),
+  0 12px 24px rgba(0, 0, 0, 0.4);
+  
+
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;       /* Biar ga panjang banget */
+  margin: 40px auto 40px auto; /* Tengah + kasih jarak atas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: white; /* Biar teksnya putih */
+}
+.profile-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .profile-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+   /* CSS footer */
+   .footer {
+    background-color: #1a254b;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer .container {
+    max-width: 1100px;   
+    margin: 0 auto;        
+    padding: 0 20px;   
+}
+
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.foto-bersama {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  max-width: 800px; /* Bisa disesuaikan */
+  margin: 40px auto;
+}
+
+.foto-full {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+<body>
+ <center> <h3 class="judul-gds">ANGGOTA GDS ANGKATAN 8</h3></center>
+    <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logoGDS.png" alt="Logo Organisasi" width="50" height="50" class="d-inline-block align-text-top me-2">
+  <span class="text-white fw-bold">GDS ESEMKASA</span>
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sejarah.html">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="VisiMisi.html">Visi&Misi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Galeri Dokumentasi </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="sejarah.html">Latian Rutin</a></li>
+                      <li><a class="dropdown-item" href="visimisi.html">Latian Gabungan</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Latian Upacara</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Pembiasaan Pagi</a></li>
+                    </ul>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Struktur.html">Struktur Organisasi</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ke Anggotaan </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="AKT5.html">GDS Angkatan 5</a></li>
+                      <li><a class="dropdown-item" href="AKT6.html">GDS Angkatan 6</a></li>
+                      <li><a class="dropdown-item" href="AKT7.html">GDS Angkatan 7</a></li>
+                      <li><a class="dropdown-item" href="AKT8.html">GDS Angkatan 8</a></li>
+                     
+                    </ul>
+                  </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="daftar.html">Daftar Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-card foto-bersama">
+  <img src="img/AKT8.jpg" alt="Foto Bersama Anggota GDS" class="foto-full">
+</div>
+
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Risky Intan Salvarina</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 04 April 2009</div>
+   <div class="profile-text">Alamat: Dsn. Polean, Desa Tamansari Kec.Tegalsari</div>
+   <div class="profile-text">Jabatan: Sekretaris 2</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Juliette Hawa Selajava</div>
+   <div class="profile-text">Tanggal Lahir: Kep.Selayar, 30 Juli 2009</div>
+   <div class="profile-text">Alamat: Jl. Karimun Jawa no.09, lateng, banyuwangi</div>
+   <div class="profile-text">Jabatan: Bendahara 2</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Abdul Basit</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 17 Maret 2008</div>
+   <div class="profile-text">Alamat: dusun krajan, desa kedayunan, kec.kabat</div>
+   <div class="profile-text">Jabatan: Sie Upacara</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Mei Rusdiana Dewi</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 14 Mei 2008</div>
+   <div class="profile-text">Alamat: Jalan Kalilo Gang Rumongso, Pengantigan</div>
+   <div class="profile-text">Jabatan: Sie Upacara</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Maulana Dinar Pratama</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 28 Maret 2009</div>
+   <div class="profile-text">Alamat: Dadapan, Kabat</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Ameliya Putri</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 19 Mei 2008</div>
+   <div class="profile-text">Alamat: Lingkungan Papring</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Farisa Awaliyah</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 18 Februari 2009</div>
+   <div class="profile-text">Alamat: Jl.Batur no 57</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Amanda Eka Puspitasari</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 03 Februari 2008</div>
+   <div class="profile-text">Alamat: Dsn. Sumberagung, Ds.Rejoagung, Kec. Srono</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Imania Suci</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 16 Juli 2008</div>
+   <div class="profile-text">Alamat: Jl. Barong, Bakungan, link. Krajan</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Rizki Iqbal Maulana</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 20 Mei 2009</div>
+   <div class="profile-text">Alamat: dusun benel desa licin kec.licin</div>
+   <div class="profile-text">Jabatan: Sie Harian</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Salma zulfa az zahra</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 22 Desember 2008</div>
+   <div class="profile-text">Alamat: dsn. kraja desa. pendarungan rt 02 / rw 02</div>
+   <div class="profile-text">Jabatan: Sie Humas</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Oktafia Malabis Gina</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 11 juni 2008</div>
+   <div class="profile-text">Alamat: dsn.kejoyo ds.tambong kec.kabat</div>
+   <div class="profile-text">Jabatan: Sie Humas</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Nabila Sunia</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 20 April 2008</div>
+   <div class="profile-text">Alamat: dusun secawan desa dadapan kec.kabat</div>
+   <div class="profile-text">Jabatan: Sie Humas</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Vaneilzha Kheyra</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 29 Maret 2009</div>
+   <div class="profile-text">Alamat: Jl.Perkebunan kalibendo dsn krajan desa tamansuruh</div>
+   <div class="profile-text">Jabatan: Sie Humas</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Ni komang bajawan Andrea varesa</div>
+   <div class="profile-text">Tanggal Lahir: Jembrana, 04 Oktober 2008</div>
+   <div class="profile-text">Alamat: Perumahan bosowa BLOK A7</div>
+   <div class="profile-text">Jabatan: Sie Inventaris</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Ana Rika Ummatus Sholeha </div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 25 November 2008</div>
+   <div class="profile-text">Alamat: Dsn.Ampelgading Rt.02 Rw.01</div>
+   <div class="profile-text">Jabatan: Sie Inventaris</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Mentari Tamala Wangi</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 18 Desember 2008</div>
+   <div class="profile-text">Alamat: Jl. lawu II rt/rw 002/003 singotrunan banyuwangi</div>
+   <div class="profile-text">Jabatan: Sie Inventaris</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Dewi berlian aprilia tectona grandis</div>
+   <div class="profile-text">Tanggal Lahir: Banyuwangi, 11 April 2008</div>
+   <div class="profile-text">Alamat: Dusun kebun dadap, Desa Tamansari, Kec. licin</div>
+   <div class="profile-text">Jabatan: Sie Inventaris</div>
+</div>
+</div>
+    <div class="profile-card shadow">
+  <img src="img/logoGDS.png" alt="Noviana Putri Damayanti" class="profile-img">
+  <div class="profile-info">
+    <div class="profile-text fw-bold">Nama: Isabelita Indira Zivana</div>
+   <div class="profile-text">Tanggal Lahir: Jember, 11 Juni 2008</div>
+   <div class="profile-text">Alamat: JL. Basuki Rahmat NO 20 Lateng</div>
+   <div class="profile-text">Jabatan: Sie Inventaris</div>
+</div>
+</div>
+   
+
+ <footer class="footer" id="Kontak">
+    <div class="container">
+        <div class="row">
+            <!-- Kolom 1 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">GDS ESEMKASA</h3>
+                <p>GDS SMKN 1 Banyuwangi adalah organisasi siswa yang fokus pada pembinaan kedisiplinan, bela negara, dan penyiapan calon paskibra sejak tahun 2018.</p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Navbar</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sejarah</a></li>
+                    <li><a href="#">Visi&Misi</a></li>
+                    <li><a href="#">Galeri Dokumentasi</a></li>
+                    <li><a href="#">Struktur Organisasi</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Kontak</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Jl. Wijaya Kusuma No.46, Giri, Banyuwangi</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <div>(0333) - 424541</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <div>esemkasagds@gmail.com</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fab fa-instagram"></i>
+                    <div>@gds_esemkasa</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>GERAKAN DISIPLIN SEKOLAH</p>
+        </div>
+    </div>
+</footer>
+
+    
+</body>
+</html>

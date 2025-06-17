@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi GDS 2024/2025</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+      /* CSS untuk body + navbar*/    
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEF9E1;
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+    padding-top: 80px;
+     margin: 0;
+    padding: 0;
+}
+        
+.navbar {
+    padding: 15px 0;
+    background-color: rgb(118, 29, 29);
+}
+        
+.navbar-brand {
+    font-weight: bold;
+}   
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand,
+.custom-navbar .dropdown-toggle,
+.custom-navbar .dropdown-item {
+    color: white !important;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .dropdown-item:hover {
+    color: #cccccc !important;
+}
+.custom-navbar .dropdown-menu {
+    background-color: rgb(80, 20, 20);
+}
+ h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .image img {
+      width: 75%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Efek animasi muncul */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #512d2d;
+}
+
+
+.card h2 {
+      font-size: 18px;
+}
+
+ .image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.image-wrapper .png-bg {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+/* Struktur Organisasi */
+.struktur-org .box {
+    background-color: #c0392b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    min-width: 220px;
+    max-width: 280px;
+}
+/* Sidebar */
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main Struktur */
+.struktur {
+    flex: 1;
+    padding: 30px;
+}
+
+.struktur h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.box {
+    background: #e74c3c;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin: 10px auto;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.horizontal.big {
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.card-org {
+  background-color: #b30000; /* merah terang seperti pada gambar struktur */
+  color: white; /* teks putih biar kontras */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-width: 250px;
+  max-width: 300px;
+  margin: 10px;
+
+  height: 100%; /* <--- tambahan ini biar semua tinggi card sama */
+}
+
+.card-org {
+  border: 2px solid white;
+  font-weight: bold;
+}
+
+
+.card-org ul {
+  padding-left: 18px;
+  margin: 10px 0 0 0;
+}
+
+.card-org ul li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.struktur-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.row-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Sesuaikan .card-org dengan style kamu */
+.card-org {
+  background-color: #fff4cc;
+  color: black;
+  border: 3px solid darkred;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  min-width: 250px;
+}
+
+
+</style>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logoGDS.png" alt="Logo Organisasi" width="50" height="50" class="d-inline-block align-text-top me-2">
+  <span class="text-white fw-bold">GDS ESEMKASA</span>
+</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sejarah.html">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="VisiMisi.html">Visi&Misi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Galeri Dokumentasi </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="sejarah.html">Latian Rutin</a></li>
+                      <li><a class="dropdown-item" href="visimisi.html">Latian Gabungan</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Latian Upacara</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Pembiasaan Pagi</a></li>
+                    </ul>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#respon">Struktur Organisasi</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ke Anggotaan </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="AKT5.html">GDS Angkatan 5</a></li>
+                      <li><a class="dropdown-item" href="AKT6.html">GDS Angkatan 6</a></li>
+                      <li><a class="dropdown-item" href="AKT7.html">GDS Angkatan 7</a></li>
+                      <li><a class="dropdown-item" href="AKT8.html">GDS Angkatan 8</a></li>
+                     
+                    </ul>
+                  </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="daftar.html">Daftar Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Struktur Organisasi -->
+<section class="struktur-org text-center py-5">
+  <div class="container">
+    <h2 class="text-dark fw-bold mb-4">STRUKTUR ORGANISASI<br>GERAKAN DISIPLIN SEKOLAH<br>TAHUN 2024 / 2025</h2>
+    
+   <div class="struktur-container">
+  <div class="card-org">Kepala Sekolah<br>Drs. Mulyadi, M.Pd</div>
+
+  <div class="card-org">WaKa. Kesiswaan<br>Polin Febiana, M.Pd</div>
+
+  <div class="row-flex">
+    <div class="card-org">KaSi. Kesiswaan<br>Jaenuri, S.Kom</div>
+
+    <div class="right-stack">
+      <div class="card-org">Pembina GDS<br>Dwi Dedy Susandi, S.Sn</div>
+      <div class="card-org">Kedisiplinan<br>M. Nurhadi, S.Pd</div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- KaPolSek -->
+    <div class="card-org mx-auto mb-3">
+      Ketua Polisi Sekolah (KaPolSek)
+    </div>
+
+    <!-- Ketua Umum dan Ketua GDS -->
+    <div class="card-org mx-auto mb-2">
+      Ketua Umum GDS<br><strong>Noviana Putri Damayanti</strong>
+    </div>
+    <div class="card-org mx-auto mb-2">
+      Ketua GDS<br><strong>Ardio Daffa Raihansyah</strong>
+    </div>
+    <div class="card-org mx-auto mb-3">
+      Wakil Ketua GDS<br><strong>Ulfa Tria Firdaus</strong>
+    </div>
+
+    <!-- Sekretaris dan Bendahara -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+      <div class="card-org">
+        Sekretaris<br><strong>Andini Dewi Arlesta</strong><br>Sekretaris 1: Risky Intan
+      </div>
+      <div class="card-org">
+        Bendahara<br><strong>Bilqis Ratu Armada</strong><br>Bendahara 1: Juliette H.S
+      </div>
+    </div>
+
+    <!-- Seksi-seksi -->
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <div class="card-org text-start">
+      <strong class="d-block text-center">Sie Upacara<br>Arkhan N.F (KaSie)</strong><br>
+        <ul>
+          <li>Damar Gesang E.</li>
+          <li>Suharta Nur J.</li>
+          <li>Citra Tursina</li>
+          <li>M. Mario L.</li>
+          <li>Idfi Okta</li>
+          <li>Siti Nur Alisah</li>
+          <li>Mei Rusdiana</li>
+          <li>Abdul Basit</li>
+          <li>Siti Afkarina</li>
+        </ul>
+      </div>
+      <div class="card-org text-start">
+        <strong class="d-block text-center">Sie Harian<br>M. Farhan A. (KaSie)</strong><br>
+        <ul>
+          <li>Devina Ayu P.</li>
+          <li>Siva Uliana</li>
+          <li>M. Rafi R.</li>
+          <li>Maulana Dinar</li>
+          <li>Ameliya Putri</li>
+          <li>Farisa Awaliya</li>
+          <li>Amanda Eka</li>
+          <li>Imania Suci</li>
+          <li>Rizky Iqbal</li>
+        </ul>
+      </div>
+      <div class="card-org text-start">
+        <strong class="d-block text-center">Sie Humas<br>Angghita M. (KaSie)</strong><br>
+        <ul>
+          <li>Nayshilla Zafarani</li>
+          <li>Puspita Syaharani</li>
+          <li>Satya Ayu Meyka</li>
+          <li>Moch. Rafael</li>
+          <li>Aillen Septia</li>
+          <li>Khalila Zahra</li>
+          <li>Oktafia Malasari</li>
+          <li>Salma Zulfa</li>
+          <li>Nabila Sunia</li>
+          <li>VanieIzha</li>
+        </ul>
+      </div>
+      <div class="card-org text-start">
+        <strong class="d-block text-center">Sie Inventaris<br>P. Keysyela (KaSie)</strong><br>
+        <ul>
+          <li>Rizky Dwi Shinta</li>
+          <li>Bunga Novita S.</li>
+          <li>Fachrezy C. Duo</li>
+          <li>Ghaffar P.A.</li>
+          <li>Aillen Septia</li>
+          <li>Ni Komang B.</li>
+          <li>Anarika Ummah</li>
+          <li>Mentari Tamala</li>
+          <li>Dewi Berlian</li>
+          <li>Isabelita</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    
+</body>
+</html>

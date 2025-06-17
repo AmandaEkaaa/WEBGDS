@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visi & Misi</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    /* CSS untuk body + navbar*/    
+ body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEF9E1;
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+    padding-top: 80px;
+     margin: 0;
+    padding: 0;
+}
+        
+.navbar {
+    padding: 15px 0;
+    background-color: rgb(118, 29, 29);
+}
+        
+.navbar-brand {
+    font-weight: bold;
+}   
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand,
+.custom-navbar .dropdown-toggle,
+.custom-navbar .dropdown-item {
+    color: white !important;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .dropdown-item:hover {
+    color: #cccccc !important;
+}
+.custom-navbar .dropdown-menu {
+    background-color: rgb(80, 20, 20);
+}
+ h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .image img {
+      width: 75%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Efek animasi muncul */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #512d2d;
+}
+
+
+.card h2 {
+      font-size: 18px;
+}
+
+ .image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.image-wrapper .png-bg {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+}
+    /* CSS footer */
+   .footer {
+    background-color: #1a254b;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer .container {
+    max-width: 1100px;   
+    margin: 0 auto;        
+    padding: 0 20px;   
+}
+
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/*CSS vm*/
+/* Tambahan padding atas untuk menghindari overlap dengan navbar */
+.vm {
+  padding-top: 0px;
+}
+
+/* Rapiin judul VISI & MISI */
+h1 {
+  margin-top: 100px; /* tambahkan jarak dari navbar */
+  font-size: 32px;
+  color: #512d2d;
+  font-weight: bold;
+}
+
+/* Penyesuaian gaya card VISI & MISI */
+.card-gaul {
+  background-color: #fff8f2;
+  border: 2px solid #e0c9a6;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(80, 20, 20, 0.1);
+  transition: 0.3s ease;
+}
+
+.card-gaul:hover {
+  box-shadow: 0 8px 20px rgba(80, 20, 20, 0.2);
+}
+
+.card-gaul h3 {
+  color: #762d2d;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+
+
+
+</style>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
+        <div class="container">
+           <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logoGDS.png" alt="Logo Organisasi" width="50" height="50" class="d-inline-block align-text-top me-2">
+  <span class="text-white fw-bold">GDS ESEMKASA</span>
+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Sejarah.html">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="VisiMisi.html">Visi&Misi</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Galeri Dokumentasi </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="sejarah.html">Latian Rutin</a></li>
+                      <li><a class="dropdown-item" href="visimisi.html">Latian Gabungan</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Latian Upacara</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Pembiasaan Pagi</a></li>
+                    </ul>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Struktur.html">Struktur Organisasi</a>
+                    </li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ke Anggotaan </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="AKT5.html">GDS Angkatan 5</a></li>
+                      <li><a class="dropdown-item" href="AKT6.html">GDS Angkatan 6</a></li>
+                      <li><a class="dropdown-item" href="AKT7.html">GDS Angkatan 7</a></li>
+                      <li><a class="dropdown-item" href="AKT8.html">GDS Angkatan 8</a></li>
+                     
+                    </ul>
+                  </li>
+                    <li class="nav-item ms-2">
+                        <a class="btn btn-primary" href="daftar.html">Daftar Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center">VISI & MISI GERAKAN DISIPLIN SEKOLAH</h1>
+
+    <section class="vm">
+    <div class="container mt-2">
+    
+    <img src="img/GDS.png" class="img-fluid rounded-circle d-block mx-auto mb-4" alt="Logo" style="width: 500px;">
+
+        <div class="card card-gaul mb-4 p-3">
+            <div class="card-body">
+                <h3 class="card-title">VISI</h3>
+                <p class="card-text">
+                    Terwujudnya siswa yang bertaqwa, berakhlak mulia, disiplin, peduli dan berbudaya.
+                </p>
+            </div>
+        </div>
+
+        <div class="card card-gaul mb-5 p-3">
+            <div class="card-body">
+                <h3 class="card-title">MISI</h3>
+                <ul class="card-text">
+                    <li>Menjadi siswa yang bertaqwa kepada Tuhan Yang Maha Esa</li>
+                    <li>Mengoptimalkan akhlak dan sopan santun terhadap sesama manusia</li>
+                    <li>Mengoptimalkan sikap disiplin tinggi baik di sekolah maupun di luar sekolah</li>
+                    <li>Meningkatkan rasa peduli terhadap sesama dengan tidak adanya perundungan di sekolah</li>
+                    <li>Menjadi insan yang santun dan berbudaya di manapun berada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+    <footer class="footer" id="Kontak">
+    <div class="container">
+        <div class="row">
+            <!-- Kolom 1 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">GDS ESEMKASA</h3>
+                <p>GDS SMKN 1 Banyuwangi adalah organisasi siswa yang fokus pada pembinaan kedisiplinan, bela negara, dan penyiapan calon paskibra sejak tahun 2018.</p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Navbar</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Sejarah</a></li>
+                    <li><a href="#">Visi&Misi</a></li>
+                    <li><a href="#">Galeri Dokumentasi</a></li>
+                    <li><a href="#">Struktur Organisasi</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Kontak</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Jl. Wijaya Kusuma No.46, Giri, Banyuwangi</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-phone"></i>
+                    <div>(0333) - 424541</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <div>esemkasagds@gmail.com</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fab fa-instagram"></i>
+                    <div>@gds_esemkasa</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>GERAKAN DISIPLIN SEKOLAH</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

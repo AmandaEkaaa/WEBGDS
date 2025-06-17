@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Angkatan 5</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -13,7 +13,8 @@
  body {
     font-family: 'Poppins', sans-serif;
     background-color: #FEF9E1;
-     background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+
     padding-top: 80px;
 }
         
@@ -38,12 +39,75 @@
 .custom-navbar .dropdown-menu {
     background-color: rgb(80, 20, 20);
 }
+/* Animasi saat halaman dimuat */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gaya judul */
+.judul-gds {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a254b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  margin: 40px auto 20px;
+  padding-bottom: 10px;
+  opacity: 0; /* awalnya sembunyi */
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Garis bawah keren */
+.judul-gds::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #3498db;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 2px;
+}
 
 /* CSS untuk Card Profil*/
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.profile-card {
+  opacity: 0;
+  animation: blurIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
 .profile-card {
   background-color: #762f2f;
 background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-
+box-shadow: 
+  0 4px 8px rgba(0, 0, 0, 0.3),
+  0 12px 24px rgba(0, 0, 0, 0.4);
+  
 
   border-radius: 20px;
   padding: 25px;
@@ -53,6 +117,11 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
   margin: 40px auto 40px auto; /* Tengah + kasih jarak atas */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   color: white; /* Biar teksnya putih */
+}
+.profile-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
 }
 
     .profile-img {
@@ -79,8 +148,29 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
    .footer {
     background-color: #1a254b;
     color: white;
-    padding: 40px 0 20px;
+    padding: 60px 20px 30px;
 }
+
+.footer .container {
+    max-width: 1100px;   
+    margin: 0 auto;        
+    padding: 0 20px;   
+}
+
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 
 .footer-title {
     font-size: 1.3rem;
@@ -116,17 +206,6 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
     line-height: 1.4;
 }
 
-.footer .col {
-    flex: 1 1 250px;
-    min-width: 200px;
-}
-
-.contact-info {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 15px;
-}
 .footer-bottom {
     text-align: center;
     color: #ccc;
@@ -134,41 +213,70 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
     padding-top: 30px;
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
-    max-width: 1200px;
-    margin: 0 auto;
 }
+.foto-bersama {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  max-width: 800px; /* Bisa disesuaikan */
+  margin: 40px auto;
+}
+
+.foto-full {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
 </style>
 <body>
+ <center> <h3 class="judul-gds">ANGGOTA GDS ANGKATAN 6</h3></center>
     <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
-             <img src="img/logoGDS.png" alt="Logo Organisasi" width="50" height="50" class="d-inline-block align-text-top">
+           <a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="img/logoGDS.png" alt="Logo Organisasi" width="50" height="50" class="d-inline-block align-text-top me-2">
+  <span class="text-white fw-bold">GDS ESEMKASA</span>
+</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="beranda.html">Beranda</a>
+                        <a class="nav-link" href="Sejarah.html">Sejarah</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="VisiMisi.html">Visi&Misi</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Tentang Kami </a>
+                    Galeri Dokumentasi </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
-                      <li><a class="dropdown-item" href="visimisi.html">Visi Misi</a></li>
-                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Rencana Kegiatan</a></li>
+                      <li><a class="dropdown-item" href="sejarah.html">Latian Rutin</a></li>
+                      <li><a class="dropdown-item" href="visimisi.html">Latian Gabungan</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Latian Upacara</a></li>
+                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Pembiasaan Pagi</a></li>
                     </ul>
                   </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ProgramKhusus.html">Program</a>
+                        <a class="nav-link" href="Struktur.html">Struktur Organisasi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#respon">Respon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Kontak">Kontak</a>
-                    </li>
+                     <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ke Anggotaan </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="AKT5.html">GDS Angkatan 5</a></li>
+                      <li><a class="dropdown-item" href="AKT6.html">GDS Angkatan 6</a></li>
+                      <li><a class="dropdown-item" href="AKT7.html">GDS Angkatan 7</a></li>
+                      <li><a class="dropdown-item" href="AKT8.html">GDS Angkatan 8</a></li>
+                     
+                    </ul>
+                  </li>
                     <li class="nav-item ms-2">
                         <a class="btn btn-primary" href="daftar.html">Daftar Sekarang</a>
                     </li>
@@ -176,78 +284,12 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
             </div>
         </div>
     </nav>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
+
+     <div class="profile-card foto-bersama">
+  <img src="img/AKT6.jpg" alt="Foto Bersama Anggota GDS" class="foto-full">
 </div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
-     <div class="profile-card shadow">
-  <img src="img/download.jpeg" alt="Foto Kucing" class="profile-img">
-  <div class="profile-info">
-    <div class="profile-text fw-bold">Nama: Meong Si Kucing</div>
-    <div class="profile-text">Tanggal Lahir: 1 Januari 2020</div>
-    <div class="profile-text">Jabatan: Pengawas Tikus</div>
-  </div>
-</div>
+
+     
 
  <footer class="footer" id="Kontak">
     <div class="container">
@@ -262,11 +304,10 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h3 class="footer-title">Navbar</h3>
                 <ul class="footer-links">
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Tentang Kami</a></li>
-                    <li><a href="#">Program</a></li>
-                    <li><a href="#">Jurusan</a></li>
-                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Sejarah</a></li>
+                    <li><a href="#">Visi&Misi</a></li>
+                    <li><a href="#">Galeri Dokumentasi</a></li>
+                    <li><a href="#">Struktur Organisasi</a></li>
                 </ul>
             </div>
 
@@ -283,7 +324,7 @@ background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.
                 </div>
                 <div class="contact-info">
                     <i class="fas fa-envelope"></i>
-                    <div>smkn1bwi_wk46@yahoo.co.id</div>
+                    <div>esemkasagds@gmail.com</div>
                 </div>
                 <div class="contact-info">
                     <i class="fab fa-instagram"></i>

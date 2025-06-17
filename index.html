@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerakan Disiplin Sekolah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('img/Ror.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+    }
+
+    .overlay {
+     background-color: rgba(0, 0, 0, 0.4);  /* Latar gelap */
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      color: white;
+    }
+
+    .text-box {
+      max-width: 50%;
+      z-index: 1;
+      margin-left: 40px;
+    }
+
+    .text-box h1 {
+      font-size: 2.5em;
+      color: whitesmoke;
+      margin-bottom: 20px;
+    }
+
+    .text-box p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background-color: #1f4eff;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .logoGDS {
+      max-width: 300px;
+      height: auto;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .overlay {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-box, .logoGDS {
+        max-width: 100%;
+        margin: 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="text-box">
+      <h1>Gerakan Disiplin Sekolah</h1>
+      <p>
+        Didirikan sejak tahun 2018, GDS merupakan organisasi sekolah yang 
+        berperan sebagai pelopor kedisiplinan siswa. Melalui kegiatan pembinaan, 
+        GDS menanamkan semangat bela negara dan cinta tanah air. Selain itu, 
+        GDS juga menjadi wadah pembentukan karakter dan penyeleksian calon Paskibra 
+        untuk tingkat kecamatan, kabupaten, hingga provinsi.
+      </p>
+      <a href="Sejarah.html" class="button">Selanjutnya</a>
+    </div>
+    <img src="img/logoGDS.png" alt="Logo GDS" class="logoGDS">
+  </div>
+</body>
+</html>
