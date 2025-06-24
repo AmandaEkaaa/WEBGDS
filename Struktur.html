@@ -23,6 +23,19 @@
     padding: 15px 0;
     background-color: rgb(118, 29, 29);
 }
+.btn-daftar {
+  background-color: #FEF9E1;
+  color: #512d2d;
+  border: 2px solid #e0c9a6;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-daftar:hover {
+  background-color: #f2e7c3;
+  color: #000;
+  border-color: #d5b97c;
+}
         
 .navbar-brand {
     font-weight: bold;
@@ -45,6 +58,7 @@
       font-weight: bold;
       text-align: center;
       margin: 30px 0 20px;
+     padding-top: 20px;
     }
 
     .image img {
@@ -88,6 +102,7 @@
 
 .card h2 {
       font-size: 18px;
+
 }
 
  .image-wrapper {
@@ -255,6 +270,77 @@
   min-width: 250px;
 }
 
+ /* CSS footer */
+   .footer {
+    background-color: #1a254b;
+    color: white;
+    padding: 60px 20px 30px;
+}
+
+.footer .container {
+    max-width: 1100px;   
+    margin: 0 auto;        
+    padding: 0 20px;   
+}
+
+
+.footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+
+.footer-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.contact-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.9rem;
+    padding-top: 30px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 
 </style>
 <body>
@@ -274,16 +360,14 @@
                         <a class="nav-link" href="Sejarah.html">Sejarah</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="VisiMisi.html">Visi&Misi</a>
+                        <a class="nav-link" href="VisiMisi.html">VisiMisi</a>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Galeri Dokumentasi </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="sejarah.html">Latian Rutin</a></li>
-                      <li><a class="dropdown-item" href="visimisi.html">Latian Gabungan</a></li>
-                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Latian Upacara</a></li>
-                      <li><a class="dropdown-item" href="ProgamKegiatan.html">Pembiasaan Pagi</a></li>
+                      <li><a class="dropdown-item" href="Galeri.html">Latian</a></li>
+                      <li><a class="dropdown-item" href="PP.html">Pembiasaan Pagi</a></li>
                     </ul>
                   </li>
                     <li class="nav-item">
@@ -301,7 +385,7 @@
                     </ul>
                   </li>
                     <li class="nav-item ms-2">
-                        <a class="btn btn-primary" href="daftar.html">Daftar Sekarang</a>
+                        <a class="btn btn-daftar" href="daftar.html">Daftar Sekarang</a>
                     </li>
                 </ul>
             </div>
@@ -311,7 +395,7 @@
     <!-- Section Struktur Organisasi -->
 <section class="struktur-org text-center py-5">
   <div class="container">
-    <h2 class="text-dark fw-bold mb-4">STRUKTUR ORGANISASI<br>GERAKAN DISIPLIN SEKOLAH<br>TAHUN 2024 / 2025</h2>
+    <h1 class="text-dark fw-bold mb-4">STRUKTUR ORGANISASI<br>GERAKAN DISIPLIN SEKOLAH<br>TAHUN 2024 / 2025</h1>
     
    <div class="struktur-container">
   <div class="card-org">Kepala Sekolah<br>Drs. Mulyadi, M.Pd</div>
@@ -362,20 +446,16 @@
         <ul>
           <li>Damar Gesang E.</li>
           <li>Suharta Nur J.</li>
-          <li>Citra Tursina</li>
           <li>M. Mario L.</li>
           <li>Idfi Okta</li>
-          <li>Siti Nur Alisah</li>
           <li>Mei Rusdiana</li>
           <li>Abdul Basit</li>
-          <li>Siti Afkarina</li>
         </ul>
       </div>
       <div class="card-org text-start">
         <strong class="d-block text-center">Sie Harian<br>M. Farhan A. (KaSie)</strong><br>
         <ul>
           <li>Devina Ayu P.</li>
-          <li>Siva Uliana</li>
           <li>M. Rafi R.</li>
           <li>Maulana Dinar</li>
           <li>Ameliya Putri</li>
@@ -392,12 +472,10 @@
           <li>Puspita Syaharani</li>
           <li>Satya Ayu Meyka</li>
           <li>Moch. Rafael</li>
-          <li>Aillen Septia</li>
-          <li>Khalila Zahra</li>
-          <li>Oktafia Malasari</li>
+          <li>Oktafia Malabis</li>
           <li>Salma Zulfa</li>
           <li>Nabila Sunia</li>
-          <li>VanieIzha</li>
+          <li>Vaneilzha Kheyra</li>
         </ul>
       </div>
       <div class="card-org text-start">
@@ -405,19 +483,64 @@
         <ul>
           <li>Rizky Dwi Shinta</li>
           <li>Bunga Novita S.</li>
-          <li>Fachrezy C. Duo</li>
+          <li>Fachrezy Centrino Duo </li>
           <li>Ghaffar P.A.</li>
-          <li>Aillen Septia</li>
           <li>Ni Komang B.</li>
-          <li>Anarika Ummah</li>
+          <li>Anarika Ummahtus</li>
           <li>Mentari Tamala</li>
           <li>Dewi Berlian</li>
-          <li>Isabelita</li>
+          <li>Isabelita Indira</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<footer class="footer" id="Kontak">
+    <div class="container">
+        <div class="row">
+            <!-- Kolom 1 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">GDS ESEMKASA</h3>
+                <p>GDS SMKN 1 Banyuwangi adalah organisasi siswa yang fokus pada pembinaan kedisiplinan, bela negara, dan penyiapan calon paskibra sejak tahun 2018.</p>
+            </div>
+
+            <!-- Kolom 2 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Navbar</h3>
+                <ul class="footer-links">
+                    <li><a href="Sejarah.html">Sejarah</a></li>
+                    <li><a href="VisiMisi.html">VisiMisi</a></li>
+                    <li><a href="Galeri.html">Galeri Dokumentasi</a></li>
+                    <li><a href="Struktur.html">Struktur Organisasi</a></li>
+                    <li><a href="AKT5.html">Ke Anggotaan</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3 -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h3 class="footer-title">Kontak</h3>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Gedung U7 SMKN 1 BANYUWANGI, Jl. Wijaya Kusuma No.46, Giri, Banyuwangi</div>
+                </div>
+               
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i>
+                    <div>esemkasagds@gmail.com</div>
+                </div>
+                <div class="contact-info">
+                    <i class="fab fa-instagram"></i>
+                    <div>@gds_esemkasa</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>GERAKAN DISIPLIN SEKOLAH</p>
+        </div>
+    </div>
+</footer>
 
 
     
