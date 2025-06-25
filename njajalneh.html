@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Garis Tengah</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      font-family: Arial, sans-serif;
+    }
+
+    .card-org {
+      background-color: #fff3cd;
+      border: 2px solid maroon;
+      border-radius: 10px;
+      padding: 15px 30px;
+      margin: 100px auto;
+      width: fit-content;
+      position: relative; /* INI YANG PALING PENTING */
+    }
+
+    .line {
+      position: absolute;
+      background-color: maroon;
+    }
+
+    .line-horizontal {
+      height: 2px;
+      width: 100px;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-org">
+    WaKa. Kesiswaan<br>Polin Febiana, M.Pd
+
+    <!-- Garis horizontal muncul dari tengah -->
+    <div class="line line-horizontal"></div>
+  </div>
+  <div class="card-org">
+    WaKa. Kesiswaan<br>Polin Febiana, M.Pd
+
+    <!-- Garis horizontal muncul dari tengah -->
+    <div class="line line-horizontal"></div>
+  </div>
+  <div class="card-org">
+    WaKa. Kesiswaan<br>Polin Febiana, M.Pd
+
+    <!-- Garis horizontal muncul dari tengah -->
+    <div class="line line-horizontal"></div>
+  </div>
+
+</body>
+</html>
