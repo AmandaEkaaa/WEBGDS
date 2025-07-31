@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pembiasaan Pagi</title>
+    <title>Angkatan 4</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-    <style>
-   body {
+<style>
+/* CSS untuk body + navbar*/    
+ body {
     font-family: 'Poppins', sans-serif;
     background-color: #FEF9E1;
     background-image: url('https://www.transparenttextures.com/patterns/white-wall.png');
+
     padding-top: 80px;
-     margin: 0;
-    padding: 0;
 }
-  .navbar {
+        
+.navbar {
     padding: 15px 0;
     background-color: rgb(118, 29, 29);
 }
-    .btn-daftar {
+.btn-daftar {
   background-color: #FEF9E1;
   color: #512d2d;
   border: 2px solid #e0c9a6;
@@ -35,7 +35,7 @@
   color: #000;
   border-color: #d5b97c;
 }
-    
+        
 .navbar-brand {
     font-weight: bold;
 }   
@@ -51,99 +51,118 @@
 }
 .custom-navbar .dropdown-menu {
     background-color: rgb(80, 20, 20);
-
+}
+/* Animasi saat halaman dimuat */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  h2 {
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      margin: 30px 0 20px;
-      padding-top: 50px;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gaya judul */
+.judul-gds {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a254b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  margin: 40px auto 20px;
+  padding-bottom: 10px;
+  opacity: 0; /* awalnya sembunyi */
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Garis bawah keren */
+.judul-gds::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background: #3498db;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  border-radius: 2px;
+}
+
+/* CSS untuk Card Profil*/
+@keyframes blurIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+}
+
+.profile-card {
+  opacity: 0;
+  animation: blurIn 0.8s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.profile-card {
+  background-color: #762f2f;
+background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+box-shadow: 
+  0 4px 8px rgba(0, 0, 0, 0.3),
+  0 12px 24px rgba(0, 0, 0, 0.4);
+  
+
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;       /* Biar ga panjang banget */
+  margin: 40px auto 40px auto; /* Tengah + kasih jarak atas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: white; /* Biar teksnya putih */
+}
+.profile-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+  transition: 0.3s ease;
+}
+
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    
+    .profile-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
     }
 
-  /* Judul Galeri */
-  h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 33px;
-  color: #512d2d;
-  text-align: center;
-  margin-top: 100px; /* Jarak dari navbar */
-  margin-bottom: 20px;
-  font-weight: bold;
+    .profile-text {
+      font-size: 16px;
+      line-height: 1.4;
+    }
 
-  /* Efek bayangan teks */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-
-  /* Efek transisi hover */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-h1:hover {
-  color: #892725;
-  transform: scale(1.02);
-}
-.subjudul-bulan {
-  display: inline-block;
-  background-color: #004e92;
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
-  /* Kotak Gambar */
-  .gallery-img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  border-radius: 10px; /* <-- Tambahan ini */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* opsional, biar ada efek bayangan */
-  transition: transform 0.3s;
-}
-
-@media (min-width: 768px) {
-  .gallery-img {
-    aspect-ratio: 16/9;  /* misal di tablet/desktop pakai 16:9 */
-  }
-}
-
-
-  .gallery-img:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-  }
-
-  /* Responsive margin bawah */
-  .tab-pane .row > div {
-    margin-bottom: 20px;
-  }
-
-  /* Optional jika kamu mau teks center di tab lain */
-  .tab-pane p {
-    margin-top: 30px;
-    font-style: italic;
-    color: #555;
-  }
-  @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-.subjudul-aktif {
-  animation: pulse 1.5s infinite ease-in-out;
-}
-
-  
-  /* CSS footer */
+   /* CSS footer */
    .footer {
-  width: 100%;
-  background-color: #1a254b;
-  color: white;
-  padding: 60px 0 30px;
+    background-color: #1a254b;
+    color: white;
+    padding: 60px 20px 30px;
 }
-
 
 .footer .container {
     max-width: 1100px;   
@@ -208,8 +227,27 @@ h1:hover {
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+.foto-bersama {
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+  max-width: 800px; /* Bisa disesuaikan */
+  margin: 40px auto;
+}
+
+.foto-full {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
 </style>
 <body>
+ <center> <h3 class="judul-gds">ANGGOTA GDS ANGKATAN 4</h3></center>
     <nav class="navbar fixed-top navbar-expand-lg custom-navbar">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -232,8 +270,8 @@ h1:hover {
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Galeri Dokumentasi </a>
                     <ul class="dropdown-menu">
-                       <li><a class="dropdown-item" href="Galeri.html">Kegiatan</a></li>
-                       <li><a class="dropdown-item" href="PP.html">Pembiasaan Pagi</a></li>
+                      <li><a class="dropdown-item" href="Galeri.html">Kegiatan</a></li>
+                      <li><a class="dropdown-item" href="PP.html">Pembiasaan Pagi</a></li>
                     </ul>
                   </li>
                     <li class="nav-item">
@@ -243,7 +281,7 @@ h1:hover {
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Ke Anggotaan </a>
                     <ul class="dropdown-menu">
-                       <li><a class="dropdown-item" href="AKT2.html">GDS Angkatan 2</a></li>
+                      <li><a class="dropdown-item" href="AKT2.html">GDS Angkatan 2</a></li>
                       <li><a class="dropdown-item" href="AKT3.html">GDS Angkatan 3</a></li>
                       <li><a class="dropdown-item" href="AKT4.html">GDS Angkatan 4</a></li>
                       <li><a class="dropdown-item" href="AKT5.html">GDS Angkatan 5</a></li>
@@ -254,53 +292,21 @@ h1:hover {
                     </ul>
                   </li>
                     <li class="nav-item ms-2">
-                       <a class="btn btn-daftar" href="https://forms.gle/rnPrg7fmpynivy6d8">Daftar Sekarang</a>
+                        <a class="btn btn-daftar" href="https://forms.gle/rnPrg7fmpynivy6d8">Daftar Sekarang</a>
+
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-        <div class="container my-5">
-  <!-- Judul Galeri -->
-  <h1 >PEMBIASAAN PAGI</h1>
 
+     <div class="profile-card foto-bersama">
+  <img src="img/AKT4.jpg" alt="Foto Bersama Anggota GDS" class="foto-full">
+</div>
 
+     
 
-  <!-- Isi Galeri -->
-  <div class="tab-content" id="pills-tabContent">
-    <!-- Tab 1 -->
-    <!-- Dokumentasi Tanggal 4 September 2024 -->
-
-<div class="row g-4 mb-5">
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Mei.jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Des (1).jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Janu (1).jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Mar.jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Feb (1).jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Mar (1).jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Mei (1).jpg" class="gallery-img">
-  </div>
-  <div class="col-6 col-md-3 text-center">
-    <img src="PP/Feb (2).jpg" class="gallery-img">
-  </div>
-  </div>
-  </div>
-  </div>
-
-   <footer class="footer" id="Kontak">
+ <footer class="footer" id="Kontak">
     <div class="container">
         <div class="row">
             <!-- Kolom 1 -->
@@ -328,7 +334,7 @@ h1:hover {
                     <i class="fas fa-map-marker-alt"></i>
                     <div>Gedung U7 SMKN 1 BANYUWANGI, Jl. Wijaya Kusuma No.46, Giri, Banyuwangi</div>
                 </div>
-                
+              
                 <div class="contact-info">
                     <i class="fas fa-envelope"></i>
                     <div>esemkasagds@gmail.com</div>
@@ -345,5 +351,7 @@ h1:hover {
         </div>
     </div>
 </footer>
+
+    
 </body>
 </html>
